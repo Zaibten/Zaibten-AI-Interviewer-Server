@@ -25,8 +25,8 @@ const client = new ApifyClient({
 app.get("/api/jobs", async (req, res) => {
   const {
     position = "web developer",
-    country = "US",
-    location = "San Francisco",
+    country = "PK",
+    location = "Karachi",
   } = req.query;
 
   try {
@@ -34,7 +34,7 @@ app.get("/api/jobs", async (req, res) => {
       position,
       country,
       location,
-      maxItems: 3,
+      maxItems: 10,
       parseCompanyDetails: true,
       saveOnlyUniqueItems: true,
       followApplyRedirects: true,
